@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>addClass, remove, toggle</title>
+<style>
+    .desc {
+        background: pink;
+        padding: 2rem;
+    }
+    .dark {
+        background: #111;
+        color: #999;
+    }
+</style>
+</head>
+<body>
+
+    <div class="control">
+        <button id="btnAdd">add</button>
+        <button id="btnRemove">remove</button>
+        <button id="btnToggle">toggle</button>
+    </div>
+    <p class="desc">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto eos possimus enim impedit quos, animi nisi praesentium accusamus vero cum, ipsum error voluptatem in quam facere laudantium obcaecati! Reiciendis, ipsam.
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        var $btnAdd = $('#btnAdd'),
+            $btnRemove = $('#btnRemove'),
+            $btnToggle = $('#btnToggle'),
+            $desc = $('.desc');
+
+        // add event
+        $btnAdd.click(function(){
+            $desc.addClass('dark');
+        })
+        // remove event
+        $btnRemove.click(function(){
+            $desc.removeClass('dark');
+        })
+
+        // 자기자신이라는건 정해져있지않음. 선언된 위치, 때가 중요함
+        // console.log(this);
+
+        // Toggle  event
+        $btnToggle.click(function(){
+            $(this).toggleClass('dark');
+            $desc.toggleClass('dark');
+        })
+
+    </script>
+</body>
+</html>

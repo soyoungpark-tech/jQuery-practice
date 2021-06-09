@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>selector simple prac</title>
+<style>
+    body {
+        text-align: center;
+
+    }
+    button {
+        padding: 1rem;
+        background: pink;
+        color: #000;
+}
+img {
+    width: 500px;
+}
+</style>
+</head>
+<body>
+    <div>
+        <button id="btnDark">dark-theme</button>
+        <button id="btnWhite">white-theme</button>
+
+        <!-- basic -->
+        <button id="btnShow">show</button>
+        <button id="btnHide">hide</button>
+        <button id="btnToggle">Toggle</button>
+
+        <!-- slide -->
+        <button id="btnSlideDown">slideDown</button>
+        <button id="btnSlideUp">slideUp</button>
+        <button id="btnSlideToggle">slideToggle</button>
+
+        <!-- Fade -->
+        <button id="btnFadeIn">FadeIn</button>
+        <button id="btnFadeOut">FadeOut</button>
+        <button id="btnFadeToggle">Fade Toggle</button>
+
+
+        <h1>title</h1>
+        <img src="./images-js.jpg" alt="">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            // 누구를
+            var $btnDark = $('#btnDark');
+            var $btnWhite = $('#btnWhite');
+            // var $img = $('img');
+            var $title = $('h1');
+            var imgElement = $('img');
+            var $btnToggle = $('#btnToggle');
+
+            // 어떻게하겠다
+            // 1번 dark 버튼을 누르면(click) 배경색을 검정색으로 변환
+            $btnDark.click(function(){
+                $('body').css('background', '#000');
+                imgElement.css('width', '500px');
+                /* 
+                $title.css('font-size', '3rem');
+                $title.css('color', 'red'); 
+                */
+
+                // 멀티스타일 적용
+                // 변수에 객체를 담아 스타일 적용
+                const darkTheme = {'font-size': '3rem', 'color': 'red'};
+                $title.css(darkTheme);
+
+            })
+
+            // 2번 white 버튼 > 하얀색으로 배경 변경
+            $btnWhite.click(function(){
+                $('body').css('background', '#fff');
+                imgElement.css('width', '200px');
+            })
+
+            var $btnShow = $('#btnShow')
+            var $btnHide = $('#btnHide')
+
+            // show 버튼을 누르면 이미지 보이기
+            // 밑 두 개 동일한 문장
+            // $btnShow.click(function(){})
+            // $btnShow.on('click', function(){})
+            $btnShow.on('click', function(){
+                imgElement.show();
+            })
+            
+            // hide 버튼을 누르면 이미지 숨기기
+            $btnHide.on('click', function(){
+                imgElement.hide();
+            })
+            // toggle
+            $btnToggle.on('click', function(){
+                imgElement.toggle();
+            })
+
+            var $btnSlideDown = $('#btnSlideDown');
+            var $btnSlideUp = $('#btnSlideUp');
+            var $btnSlideToggle = $('#btnSlideToggle');
+
+            // slide Down
+            $btnSlideDown.click(function(){
+                imgElement.slideDown();
+            })
+            // slide Up
+            $btnSlideUp.click(function(){
+                imgElement.slideUp();
+            })
+            // slide Toggle
+            $btnSlideToggle.click(function(){
+                imgElement.slideToggle();
+            })
+
+            var btnFadeIn = $('#btnFadeIn');
+            var btnFadeOut = $('#btnFadeOut');
+            var btnFadeToggle = $('#btnFadeToggle');
+
+            btnFadeIn.click(function(){
+                imgElement.fadeIn();
+            })
+            btnFadeOut.click(function(){
+                imgElement.fadeOut();
+            })
+            btnFadeToggle.click(function(){
+                imgElement.fadeToggle();
+            })
+
+
+        })
+    </script>
+</body>
+</html>
