@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>tabs prac</title>
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .flex {
+        display: flex;
+    }
+    .flexbox_center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tab {
+        width: 660px;
+        margin: 0 auto;
+    }
+    .tab__menu a {
+        height: 50px;
+        width: 100px;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 50px;
+    }
+    .tab__desc {
+        padding: 1rem;
+        background: #815854;
+        color: #F9EBDE;
+    }
+</style>
+</head>
+<body>
+
+    <section>
+        <div class="tab">
+            <div class="tab__menu flex">
+                <a href="#">tab1</a>
+                <a href="#">tab2</a>
+                <a href="#">tab3</a>
+                <a href="#">tab4</a>
+            </div>
+            <div class="tab__content">
+                <div class="tab__desc">
+                    <h1>tab1-title</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                    </p>
+                </div>
+                <div class="tab__desc">
+                    <h1>tab2-title</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                    </p>
+                </div>
+                <div class="tab__desc">
+                    <h1>tab3-title</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                    </p>
+                </div>
+                <div class="tab__desc">
+                    <h1>tab4-title</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus unde, vel ipsum amet culpa animi modi ipsam. Minima adipisci quod, unde, consequuntur laudantium ratione qui quis facere sunt placeat nesciunt.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        var $tabMenu = $('.tab__menu a');
+        var $tabDesc = $('.tab__desc');
+
+        $tabDesc.hide();
+        $tabMenu.click(function(){
+            $tabDesc.fadeOut();
+        })
+    </script>
+
+
+</body>
+</html>
