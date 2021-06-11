@@ -35,6 +35,25 @@ ul {
     justify-content: center;
     align-items: center;
 }
+.flex-column {
+    flex-direction: column;
+}
+.section__content {
+    display: flex;
+    align-items: center;
+}
+.section__img {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+.section__img img {
+    width: 200px;
+    background: #fff;
+    border-radius: 60% 75% 75% 47% / 74% 63% 80% 64%;
+}
+
+/* 재사용하는 클래스 (버튼) */
+
 
 #header {
     background: var(--primary-color);
@@ -141,6 +160,16 @@ section:nth-of-type(2){
 }
 section:nth-of-type(3){
     opacity: .3;
+}
+
+section:nth-of-type(1) {
+    background: #815854;
+}
+section:nth-of-type(2) {
+    background: #79352f;
+}
+section:nth-of-type(3) {
+    background: #7b180f;
 }
 
 /* arrow up */
