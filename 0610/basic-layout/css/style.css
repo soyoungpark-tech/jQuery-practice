@@ -65,7 +65,7 @@ ul {
     z-index: var(--zindex-header);
     transition: .4s;
 }
-.header.fixed {
+#header.fixed {
     position: fixed;
     top: 0;
     left: 0;
