@@ -31,7 +31,6 @@
 $(function(){
 
     var controller = new ScrollMagic.Controller();
-
     var logo = TweenMax.to('.logo', 1, {
         x: -100,
     })
@@ -43,14 +42,14 @@ $(function(){
     })
     .setTween(logo)
     .addTo(controller)
-    .addIndicators({
-        name: '로고'
-    })
+    // .addIndicators({
+    //     name: '로고'
+    // })
 
 
 
 
-    // 생성자
+    // 생성자 박스 스타일
     var controller = new ScrollMagic.Controller();
     // 매개변수(누구, 시간, 어떻게)
     var box = TweenMax.to('.box', 1, {
@@ -83,9 +82,9 @@ $(function(){
     })
     .setTween(box)
     .addTo(controller)
-    .addIndicators({
-        name: '박스'
-    })
+    // .addIndicators({
+    //     name: '박스'
+    // })
 
 
     
@@ -102,9 +101,9 @@ $(function(){
     })
     .setTween(font)
     .addTo(controller)
-    .addIndicators({
-        name: '백그라운드 폰트'
-    })
+    // .addIndicators({
+    //     name: '백그라운드 폰트'
+    // })
 
 
 
@@ -120,9 +119,9 @@ $(function(){
     })
     .setTween(background)
     .addTo(controller)
-    .addIndicators({
-        name: '백그라운드 폰트'
-    })
+    // .addIndicators({
+    //     name: '백그라운드 폰트'
+    // })
 
 
 
