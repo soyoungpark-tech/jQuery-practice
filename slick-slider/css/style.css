@@ -39,7 +39,7 @@ body {
 }
 .slick-next {
     right: 0;
-    z-index:K 100;
+    z-index: 100;
 }
 
 .slick-prev:after,
